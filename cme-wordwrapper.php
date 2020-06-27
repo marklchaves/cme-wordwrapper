@@ -16,6 +16,9 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
+define( 'CME_WORDWRAPPER_NAME', 'cme-wordwrapper' );
+define( 'CME_WORDWRAPPER_VERSION', '1.0.0' );
+
 /**
  * Enqueue script library and inline code.
  */
@@ -24,19 +27,22 @@ function cme_wordwrapper_enqueue_scripts() {
 	// Add to footer section.
 	wp_register_script(
 		'cme_wordwrapper_script', 
-		plugins_url('/cme-wordwrapper.js', dirname(__FILE__)),
+		plugins_url('/'. CME_WORDWRAPPER_NAME . '/cme-wordwrapper.js', dirname(__FILE__)),
 		array(), 
-		'1.0.0', 
+		CME_WORDWRAPPER_VERSION, 
 		true
   );
   
   wp_enqueue_script('cme_wordwrapper_script');
   
   $str_token = '';
-	if( is_page( array( 'athenahealth', 'athenaclinicals', 'athenacollector', 'athenacommunicator' ) ) ) {
+	if ( is_page( array( 'athenahealth', 'athenaclinicals', 'athenacollector', 'athenacommunicator' ) ) ) {
     $str_token = 'athena';
-	}
-	
+	}  
+  if ( is_page( array( 'CareCloud', 'CareCloud Central', 'CareCloud Breeze', 'CareCloud Live', 'CareCloud Concierge' ) ) ) {
+    $str_token = 'Care';
+  }
+  
   $script  =  <<<EOT
 // Do an IIFE to avoid namespace cluttering.
 (function () {
@@ -51,6 +57,7 @@ function cme_wordwrapper_enqueue_scripts() {
   
   if ((val !== undefined) && (val !== "")) {
     console.log('Word wrapping enabled for the word "' + val + '".');
+    console.log('Will wrap after string: $str_token');
     // Manage the word wrapping.
     let ww = new WordWrapper(sel, "$str_token");
 
