@@ -36,13 +36,8 @@ function cme_wordwrapper_enqueue_scripts() {
   wp_enqueue_script('cme_wordwrapper_script');
   
   $str_token = '';
-	if ( is_page( array( 'athenahealth', 'athenaclinicals', 'athenacollector', 'athenacommunicator' ) ) ) {
-    $str_token = 'athena';
-	}  
-  if ( is_page( array( 'CareCloud', 'CareCloud Central', 'CareCloud Breeze', 'CareCloud Live', 'CareCloud Concierge' ) ) ) {
-    $str_token = 'Care';
-  }
-  
+  $str_token = apply_filters( 'get_wordwrapper_token',  $str_token );
+
   $script  =  <<<EOT
 // Do an IIFE to avoid namespace cluttering.
 (function () {
