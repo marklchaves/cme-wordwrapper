@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/marklchaves/will-work-for-ko-fi
  * Description: Create custom word wrapping for longer one-word headings and titles.
  * Author URI: https://www.caughtmyeye.cc/
- * Version: 1.0.0
+ * Version: 0.2.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 }
 
 define( 'CME_WORDWRAPPER_NAME', 'cme-wordwrapper' );
-define( 'CME_WORDWRAPPER_VERSION', '1.0.0' );
+define( 'CME_WORDWRAPPER_VERSION', '0.2.0' );
 
 /**
  * Enqueue script library and inline code.

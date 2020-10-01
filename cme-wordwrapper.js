@@ -5,8 +5,8 @@
  *
  * Attributes
  * 1. targetElt: The target DOM element.
- * 2. withoutBr: The first part of the word with no break.
- * 3. withBr: The first part of the word with a break.
+ * 2. withoutBr: The word with no break.
+ * 3. withBr: The word with a break.
  *
  * Methods
  * 1. wrapText()
