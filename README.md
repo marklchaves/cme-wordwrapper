@@ -1,4 +1,8 @@
-# caught my eye dev - Custom Word Wrapper Plugin
+# cme WordWrapper
+
+## caught my eye Custom Word Wrapper Plugin
+
+Customise how your page title will word wrap. 
 
 This WordPress plugin allows you to decide where a long page title will wrap (break) on smaller devices.
 
