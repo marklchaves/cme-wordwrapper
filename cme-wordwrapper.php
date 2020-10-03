@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: caught my eye WordWrapper
- * Plugin URI: https://github.com/marklchaves/will-work-for-ko-fi
+ * Plugin URI: https://github.com/marklchaves/cme-wordwrapper/
  * Description: Create custom word wrapping for longer one-word headings and titles.
  * Author URI: https://www.caughtmyeye.cc/
  * Version: 0.2.1
@@ -41,7 +41,7 @@ function cme_wordwrapper_enqueue_scripts() {
   $script  =  <<<EOT
 // Do an IIFE to avoid namespace cluttering.
 (function () {
-  let strToken = $str_token;
+  let strToken = '$str_token';
   if (strToken === '') return;
 
   let sel = ".entry-title";
