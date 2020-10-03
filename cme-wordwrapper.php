@@ -41,6 +41,9 @@ function cme_wordwrapper_enqueue_scripts() {
   $script  =  <<<EOT
 // Do an IIFE to avoid namespace cluttering.
 (function () {
+  let strToken = $str_token;
+  if (strToken === '') return;
+  
   let sel = ".entry-title";
   let val = "";
   

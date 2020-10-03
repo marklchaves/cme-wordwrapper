@@ -6,6 +6,7 @@
 
 function get_my_wordwrapper_token( $str_token )
 {
+    $str_token = '';
 
     if ( is_page( array(
         'athenahealth', 
