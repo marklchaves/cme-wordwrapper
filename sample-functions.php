@@ -6,7 +6,7 @@
 
 function get_my_wordwrapper_token( $str_token )
 {
-    $str_token = '';
+    $str_token = ''; // Override and start clean.
 
     if ( is_page( array(
         'athenahealth', 
@@ -30,4 +30,4 @@ function get_my_wordwrapper_token( $str_token )
 
     return $str_token;
 }
-add_filter( 'get_wordwrapper_token', 'get_my_wordwrapper_token', 10, 3 );
+add_filter( 'get_wordwrapper_token', 'get_my_wordwrapper_token', 10, 1 );
