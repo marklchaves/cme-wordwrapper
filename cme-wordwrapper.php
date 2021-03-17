@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/marklchaves/cme-wordwrapper/
  * Description: Create custom word wrapping for longer one-word headings and titles.
  * Author URI: https://www.caughtmyeye.cc/
- * Version: 0.2.1
+ * Version: 0.2.2
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 }
 
 define( 'CME_WORDWRAPPER_NAME', 'cme-wordwrapper' );
-define( 'CME_WORDWRAPPER_VERSION', '0.2.1' );
+define( 'CME_WORDWRAPPER_VERSION', '0.2.2' );
 
 /**
  * Enqueue script library and inline code.
@@ -33,10 +33,10 @@ function cme_wordwrapper_enqueue_scripts() {
 		true
   );
   
-  wp_enqueue_script('cme_wordwrapper_script');
+  wp_enqueue_script( 'cme_wordwrapper_script' );
   
   $str_token = '';
-  $str_token = apply_filters( 'get_wordwrapper_token',  $str_token );
+  $str_token = apply_filters( 'get_wordwrapper_token', $str_token );
 
   $script  =  <<<EOT
 // Do an IIFE to avoid namespace cluttering.
