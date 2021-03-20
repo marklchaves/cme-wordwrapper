@@ -16,6 +16,8 @@ After installing and activating the cme Custom Word Wrapper plugin, add your fil
 
 Feel free to download the [sample functions.php](https://github.com/marklchaves/cme-wordwrapper/blob/master/sample-functions.php) file to use as a template.
 
+Note: The filter can take post/page titles or slugs.
+
 ---
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D7YARD)
