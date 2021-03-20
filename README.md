@@ -4,7 +4,7 @@
 
 Customise how your page title will word wrap. 
 
-This WordPress plugin allows you to decide where a long page title will wrap (break) on smaller devices.
+This WordPress plugin allows you to decide where a long page title (`.entry-title`) will wrap (break) on smaller devices.
 
 **Example**: We can insert a line break in ThisIsAReallyLongWord to display it like `ThisIsAReally<br>LongWord` instead. This means your long page titles will fit on a mobile device without being cutoff.
 
@@ -13,7 +13,7 @@ This WordPress plugin allows you to decide where a long page title will wrap (br
 ## Installation
 
 1. Upload the **contents** of plugin zip file to the `/wp-content/plugins/cme-wordwrapper` directory, or install the plugin through the WordPress plugins page directly (wp-admin > Plugins > Add New > Upload Plugin).
-1. Activate the plugin through the 'Plugins' page.
+1. Activate the plugin through the **Plugins** page.
 
 ---
 
@@ -21,14 +21,14 @@ This WordPress plugin allows you to decide where a long page title will wrap (br
 
 After installing and activating the cme Custom Word Wrapper plugin, add your filter hook to your child theme's functions.php file or via a plugin like [Code Snippets](https://wordpress.org/plugins/code-snippets/).
 
-In the filter hook, add the post/page **title** or **slug** to list (array) with the associated text for the word wrap (token).
+In the filter hook, add the post/page **title** or **slug** to list (array) with its associated text (token) for the word wrap. Separate multiple titles or slugs by a comma.
 
 ```php
-// Adding a page to the list using
+// Add a page to the list using
 // its slug or title.
 if ( is_page( array(
-    'mypagegoeshere', 
-    'myotherpagegoeshere', 
+    'my-page-goes-here', 
+    'my-other-page-goes-here', 
     'This is My Page', 
     'Home Page'
     )) ) 
